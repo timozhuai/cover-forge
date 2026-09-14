@@ -1,0 +1,37 @@
+# ============================================================
+# Cloudflare Pages 响应头配置
+# 文档: https://developers.cloudflare.com/pages/configuration/headers/
+# 注意: 本文件会原样拷贝到构建产物根目录，Cloudflare Pages 自动识别
+# ============================================================
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin
+
+# 带内容指纹的静态资源 → 长期强缓存
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 图片资源 → 一周缓存
+/*.png
+  Cache-Control: public, max-age=604800
+
+/*.jpg
+  Cache-Control: public, max-age=604800
+
+/*.svg
+  Cache-Control: public, max-age=604800
+
+# 爬虫与站点地图 → 一天缓存
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400
