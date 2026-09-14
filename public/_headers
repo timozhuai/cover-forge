@@ -35,10 +35,3 @@
 
 /site.webmanifest
   Cache-Control: public, max-age=86400
-
-# 广告联盟 Service Worker
-# 1) 绝不能长缓存：浏览器需定期拉取以检查 sw.js 更新，否则新版无法生效
-# 2) Service-Worker-Allowed 显式声明作用域为整站（脚本在根目录，默认亦是 /）
-/sw.js
-  Cache-Control: public, max-age=0, must-revalidate
-  Service-Worker-Allowed: /
