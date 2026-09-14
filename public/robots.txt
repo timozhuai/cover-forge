@@ -1,11 +1,12 @@
 # ============================================================
 # 封面锻造厂 Cover Forge · robots.txt
-# 站点: https://cover-forge.pages.dev/
+# 站点: https://fm.mozhuai.site/
 # ============================================================
 
 # 默认允许所有搜索引擎抓取全站
 User-agent: *
 Allow: /
+Disallow: /sw.js
 Crawl-delay: 1
 
 # ---- 主流搜索引擎 ----
@@ -46,4 +47,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://cover-forge.pages.dev/sitemap.xml
+Sitemap: https://fm.mozhuai.site/sitemap.xml
