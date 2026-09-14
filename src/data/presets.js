@@ -46,7 +46,7 @@ export const DEFAULT_SETTINGS = {
   brand: 'LOGO 出品',
   tags: '新品',
   watermark: '我的账号名',
-  logoUrl: '/logo.png',
+  logoUrl: '/1.png',
   accent: '#ccff00',
   template: 'editorial',
 }
