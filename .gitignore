@@ -11,6 +11,9 @@ dist-ssr
 .wrangler
 .dev.vars
 
+# ---- WorkBuddy 本地记忆/技能（不属于站点源码） ----
+.workbuddy/
+
 # ---- 环境变量 ----
 .env
 .env.local
