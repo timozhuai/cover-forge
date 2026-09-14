@@ -35,3 +35,9 @@
 
 /site.webmanifest
   Cache-Control: public, max-age=86400
+
+# Service Worker 卸载桩 → 绝不缓存
+# 必须确保浏览器每次都能拿到「最新状态」，否则旧注册永远无法退出；
+# no-store 同时让 CDN 不保留副本，避免边缘继续吐已删除的旧广告脚本。
+/sw.js
+  Cache-Control: no-store, no-cache, must-revalidate
