@@ -285,6 +285,17 @@
         .seo-page { padding: 40px 18px 56px; }
       }
     </style>
+
+    <!-- ============ 广告联盟脚本（Monetag / nap5k · zone 11800280） ============
+         说明：脚本通过 createElement 动态注入，本身不是解析阻塞脚本，
+         不会拖慢首屏；如需下线广告，删除下面整段即可。
+         preconnect/dns-prefetch 用于提前建立到广告域名的连接，减少加载延迟。
+         ==================================================================== -->
+    <link rel="preconnect" href="https://nap5k.com" crossorigin />
+    <link rel="dns-prefetch" href="https://nap5k.com" />
+    <script>
+      (function (s) { s.dataset.zone = '11800280', s.src = 'https://nap5k.com/tag.min.js' })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+    </script>
   </head>
 
   <body>
