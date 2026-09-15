@@ -31,6 +31,9 @@ export default function App() {
             <span className="hidden md:inline text-[11px] opacity-50 tracking-[0.25em] uppercase">
               {TEMPLATES.length} 种风格 · 10 个平台比例
             </span>
+            <a className="btn btn-sm btn-ghost" href="/blog/">
+              创作专栏
+            </a>
             <button type="button" className="btn btn-sm" onClick={() => document.querySelector('.stage')?.scrollIntoView({ behavior: 'smooth' })}>
               开始制作
             </button>
@@ -54,6 +57,9 @@ export default function App() {
       <footer className="max-w-7xl mx-auto px-5 md:px-8 pb-10 pt-6 border-t border-black/10">
         <div className="flex flex-wrap gap-x-6 gap-y-1 text-[11px] opacity-50 tracking-[0.15em] uppercase">
           <span>Logo → 多平台封面</span>
+          <a href="/blog/" className="hover:opacity-100 underline underline-offset-4">
+            自媒体创作专栏
+          </a>
           <span>野蛮主义 · 促销抢购</span>
           <span>杂志风 · 品牌格调</span>
           <span>几何大胆 · 艺术潮流</span>
