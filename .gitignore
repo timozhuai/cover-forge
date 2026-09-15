@@ -7,6 +7,10 @@ dist
 dist-ssr
 .vite
 
+# ---- 构建时生成的博客页面与站点地图（由 scripts/build-posts.mjs 生成，源是 posts/*.md） ----
+public/blog/
+public/sitemap.xml
+
 # ---- 部署工具 ----
 .wrangler
 .dev.vars

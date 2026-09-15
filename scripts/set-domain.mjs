@@ -19,8 +19,11 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 
-/** 需要参与域名替换的文件 */
-const TARGET_FILES = ['index.html', 'public/robots.txt', 'public/sitemap.xml']
+/** 需要参与域名替换的文件
+ *  注意：public/sitemap.xml 已改为构建时由 scripts/build-posts.mjs 生成
+ * （域名取自 index.html 的 canonical），不再需要在这里替换。
+ */
+const TARGET_FILES = ['index.html', 'public/robots.txt']
 
 /** 兜底：首次使用时的占位域名 */
 const FALLBACK_ORIGIN = 'https://cover-forge.pages.dev'
